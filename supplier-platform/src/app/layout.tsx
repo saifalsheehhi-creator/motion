@@ -3,7 +3,7 @@ import { plexArabic, plexMono } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "منصّة البحث الذكي عن الموردين والصفقات",
+  title: "مورد | منصّة البحث الذكي عن الموردين والصفقات",
   description:
     "خدمة رقمية تساعد التجار على الوصول إلى موردين مناسبين، مقارنة التكلفة الفعلية، وتقييم المخاطر الأولية في تقرير واحد منظم.",
 };

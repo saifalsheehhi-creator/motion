@@ -88,15 +88,20 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-6xl gap-8 xl:grid-cols-3 xl:gap-8">
         <AnimatedContainer className="space-y-4">
           <a href="#top" className="inline-flex items-center gap-2">
-            <BrandMark className="size-7 text-primary" />
-            <span className="text-lg font-bold">منصّة الموردين</span>
+            <BrandMark className="size-8" />
+            <span className="flex flex-col items-start leading-none">
+              <span className="text-lg font-bold">مورد</span>
+              <span className="-mt-0.5 font-mono text-[0.68rem] tracking-wide text-deep-muted">
+                Maward
+              </span>
+            </span>
           </a>
           <p className="text-deep-muted mt-8 max-w-[30ch] text-sm md:mt-4">
             منصة رقمية تساعد التجار على الوصول إلى موردين مناسبين — بتقرير واحد منظم، بدل أيام من
             البحث المتفرق.
           </p>
           <p className="text-deep-muted/80 text-xs">
-            © {new Date().getFullYear()} منصّة البحث الذكي عن الموردين. تصوّر أولي للنقاش.
+            © {new Date().getFullYear()} مورد. تصوّر أولي للنقاش.
           </p>
         </AnimatedContainer>
 

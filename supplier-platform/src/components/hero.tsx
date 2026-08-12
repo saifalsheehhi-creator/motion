@@ -1,29 +1,62 @@
-import { BarChart3, Search, Truck } from "lucide-react";
+import { Compass, LineChart, Search, Truck } from "lucide-react";
 
 import { Counter } from "@/components/counter";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 
+// DOM order is right-to-left on screen (RTL): first item renders rightmost,
+// last item renders leftmost — ordered here so the on-screen reading is
+// Search / Risk / Logistics, left to right.
 const features = [
   {
-    icon: Search,
-    title: "بحث شامل",
-    titleEn: "Comprehensive Search",
-    body: "بحث منظّم يغطي المصادر المناسبة لكل فئة ومنطقة، بدل تصفح عشرات المواقع يدوياً.",
+    icon: Truck,
+    badge: "bg-white/10 text-foreground",
+    titleEn: "Logistics Facilitation",
+    title: "تسهيل لوجستي",
+    body: "مقارنة الشحن والحد الأدنى للطلب والتكلفة التقريبية حتى وصولها للإمارات.",
   },
   {
-    icon: BarChart3,
-    title: "تقارير تقييم المخاطر",
+    icon: LineChart,
+    badge: "bg-accent-cyan/15 text-accent-cyan",
     titleEn: "Risk Assessment Reports",
+    title: "تقارير تقييم المخاطر",
     body: "تحقق أولي ومؤشرات خطر واضحة قبل ما تتواصل مع أي مورد أو تلتزم بشيء.",
   },
   {
-    icon: Truck,
-    title: "تسهيل لوجستي",
-    titleEn: "Logistics Facilitation",
-    body: "مقارنة الشحن والحد الأدنى للطلب والتكلفة التقريبية حتى وصولها للإمارات.",
+    icon: Compass,
+    badge: "bg-primary/15 text-primary",
+    titleEn: "Comprehensive Search",
+    title: "بحث شامل",
+    body: "بحث منظّم يغطي المصادر المناسبة لكل فئة ومنطقة، بدل تصفح عشرات المواقع يدوياً.",
   },
 ];
+
+function YoutubeGlyph({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
+      <rect x="2.5" y="5.5" width="19" height="13" rx="3.5" />
+      <path d="m10.5 9 5 3-5 3Z" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function XGlyph({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round">
+      <path d="M5 5l14 14M19 5 5 19" />
+    </svg>
+  );
+}
+
+function InstagramGlyph({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8}>
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17" cy="7" r="0.9" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 export function Hero() {
   return (
@@ -32,7 +65,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(60% 45% at 50% 0%, color-mix(in srgb, var(--accent-cyan) 16%, transparent), transparent 70%), linear-gradient(180deg, var(--bg-alt), var(--background) 60%)",
+            "radial-gradient(60% 45% at 50% 0%, color-mix(in srgb, var(--accent-cyan) 18%, transparent), transparent 70%), linear-gradient(180deg, var(--bg-alt), var(--background) 65%)",
         }}
       />
       <div
@@ -45,46 +78,46 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto max-w-4xl px-5 py-20 text-center sm:px-8 sm:py-28">
+      <div className="relative mx-auto max-w-4xl px-5 pt-14 pb-10 text-center sm:px-8 sm:pt-20">
         <Reveal>
-          <h1 className="text-[2.1rem] leading-[1.25] sm:text-5xl lg:text-[3.4rem] lg:leading-[1.2]">
-            منصّة البحث الذكي
+          <h1 className="text-[2rem] leading-[1.3] sm:text-5xl lg:text-[3.1rem] lg:leading-[1.25]">
+            الخطوة الصحيحة تبدأ
             <br />
-            عن الموردين والصفقات
+            مع المورد الصحيح
           </h1>
         </Reveal>
 
         <Reveal delay={0.12}>
-          <p className="mx-auto mt-6 max-w-[46ch] text-lg text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-[46ch] text-base text-muted-foreground sm:text-lg">
             خدمة رقمية تساعد التجار على الوصول إلى موردين مناسبين، مقارنة التكلفة الفعلية، وتقييم
             المخاطر الأولية — في تقرير واحد منظم.
           </p>
         </Reveal>
 
-        <Reveal delay={0.2} className="mx-auto mt-9 max-w-xl">
-          <div className="glass flex items-center gap-2 rounded-full p-2 pe-2 ps-5 backdrop-blur-xl">
-            <span className="flex-1 text-start text-sm text-muted-foreground">
-              صف لي المنتج اللي تدور عليه… أحذية، إلكترونيات، مخزون فائض
-            </span>
-            <Button asChild size="icon" className="shrink-0 rounded-full">
+        <Reveal delay={0.2} className="mx-auto mt-8 max-w-xl">
+          <div className="glass flex items-center gap-2 rounded-full p-2 ps-2 pe-5">
+            <Button asChild size="icon" className="shrink-0">
               <a href="#pilot" aria-label="ابدأ البحث">
                 <Search className="size-4" strokeWidth={2} />
               </a>
             </Button>
+            <span className="flex-1 text-start text-sm text-muted-foreground">
+              ابحث عن المورد الصحيح...
+            </span>
           </div>
         </Reveal>
 
-        <div className="mx-auto mt-10 grid gap-4 sm:grid-cols-3">
+        <div className="mx-auto mt-8 grid gap-4 sm:grid-cols-3">
           {features.map((f, i) => (
             <Reveal
               key={f.title}
               delay={0.1 * i}
-              className="glass flex flex-col items-center gap-3 rounded-2xl px-5 py-7 text-center"
+              className="glass flex flex-col items-center gap-2.5 rounded-2xl px-5 py-6 text-center"
             >
-              <span className="flex size-14 items-center justify-center rounded-full bg-accent-cyan/15 text-accent-cyan">
+              <span className={`flex size-14 items-center justify-center rounded-full ${f.badge}`}>
                 <f.icon className="size-6" strokeWidth={1.75} />
               </span>
-              <span className="text-[0.7rem] tracking-wide text-muted-foreground uppercase font-mono">
+              <span className="font-mono text-[0.68rem] tracking-wide text-muted-foreground uppercase">
                 {f.titleEn}
               </span>
               <h3 className="text-base">{f.title}</h3>
@@ -93,13 +126,24 @@ export function Hero() {
           ))}
         </div>
 
-        <Reveal delay={0.15} className="mt-10">
+        <Reveal delay={0.15} className="mt-8 flex flex-wrap items-center justify-center gap-5">
           <Button asChild size="lg">
-            <a href="#pilot">ابدأ التجربة المدفوعة الأولى</a>
+            <a href="#pilot">اطلب شراكة أعمال</a>
           </Button>
+          <div className="glass flex items-center gap-1 rounded-full p-1.5">
+            <a href="#" aria-label="يوتيوب" className="flex size-8 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+              <YoutubeGlyph className="size-4" />
+            </a>
+            <a href="#" aria-label="إكس" className="flex size-8 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+              <XGlyph className="size-4" />
+            </a>
+            <a href="#" aria-label="إنستغرام" className="flex size-8 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+              <InstagramGlyph className="size-4" />
+            </a>
+          </div>
         </Reveal>
 
-        <Reveal delay={0.2} className="glass mx-auto mt-12 flex max-w-lg items-center justify-center divide-x divide-white/10 rounded-full py-4">
+        <Reveal delay={0.2} className="glass mx-auto mt-10 flex max-w-lg items-center justify-center divide-x divide-white/10 rounded-full py-4">
           <div className="flex-1 px-4 text-center">
             <div className="font-mono text-xl font-semibold text-primary">
               <Counter to={99} /> د.إ

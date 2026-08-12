@@ -8,31 +8,31 @@
 :root {
   --radius: 0.625rem;
 
-  --background: #0a1220;
-  --bg-alt: #0d1a30;
-  --deep: #060b16;
+  --background: #0b1a33;
+  --bg-alt: #0f2242;
+  --deep: #081326;
   --deep-foreground: #eef2fa;
   --deep-muted: #93a2c0;
 
   --foreground: #eef2fa;
-  --card: rgba(255, 255, 255, 0.045);
+  --card: rgba(255, 255, 255, 0.065);
   --card-foreground: #eef2fa;
-  --popover: #0d1a30;
+  --popover: #0f2242;
   --popover-foreground: #eef2fa;
 
   --primary: #d9a94a;
   --primary-foreground: #241a06;
-  --secondary: #101f38;
+  --secondary: #142a4d;
   --secondary-foreground: #eef2fa;
-  --muted: #101f38;
-  --muted-foreground: #8ea0c4;
+  --muted: #142a4d;
+  --muted-foreground: #93a5c9;
   --accent-cyan: #38b6d6;
   --accent-cyan-foreground: #06212a;
 
   --destructive: #e08a63;
   --destructive-foreground: #241206;
-  --border: rgba(255, 255, 255, 0.12);
-  --input: rgba(255, 255, 255, 0.14);
+  --border: rgba(255, 255, 255, 0.14);
+  --input: rgba(255, 255, 255, 0.16);
   --ring: #d9a94a;
 
   --status-good: #7fd4a8;

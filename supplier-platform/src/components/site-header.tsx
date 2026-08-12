@@ -8,10 +8,9 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "#problem", label: "المشكلة والحل" },
-  { href: "#how", label: "كيف تعمل" },
   { href: "#pricing", label: "الباقات" },
-  { href: "#report", label: "التقرير" },
-  { href: "#pilot", label: "خطة الإطلاق" },
+  { href: "#how", label: "كيف تعمل" },
+  { href: "#pilot", label: "تواصل معنا" },
 ];
 
 export function SiteHeader() {
@@ -31,10 +30,16 @@ export function SiteHeader() {
         scrolled && "border-white/10 shadow-[0_1px_0_rgba(255,255,255,0.06)]"
       )}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-3.5 sm:px-8">
-        <Button asChild size="sm" variant="ghost">
-          <a href="#pilot">ابدأ مع المورد الصحيح</a>
-        </Button>
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-3 sm:px-8">
+        <a href="#top" className="inline-flex items-center gap-2">
+          <BrandMark className="size-8" />
+          <span className="flex flex-col items-start leading-none">
+            <span className="text-base font-bold">مورد</span>
+            <span className="-mt-0.5 font-mono text-[0.65rem] tracking-wide text-muted-foreground">
+              Maward
+            </span>
+          </span>
+        </a>
 
         <ul className="hidden items-center gap-7 md:flex">
           {navLinks.map((l) => (
@@ -49,10 +54,9 @@ export function SiteHeader() {
           ))}
         </ul>
 
-        <a href="#top" className="inline-flex items-center gap-2">
-          <BrandMark className="size-7" />
-          <span className="text-base font-bold">منصّة الموردين</span>
-        </a>
+        <Button asChild size="sm" variant="ghost">
+          <a href="#pilot">ابدأ المورد الصحيح</a>
+        </Button>
       </div>
     </header>
   );
