@@ -99,7 +99,7 @@ export function Hero() {
 
       <div className="relative mx-auto max-w-5xl px-5 pt-14 pb-10 text-center sm:px-8 sm:pt-20">
         <Reveal className="glass-panel mx-auto rounded-[2rem] p-6 sm:p-10">
-          <h1 className="text-[2rem] leading-[1.3] sm:text-5xl lg:text-[3.1rem] lg:leading-[1.25]">
+          <h1 className="text-[2.5rem] leading-[1.25] sm:text-6xl lg:text-[4.1rem] lg:leading-[1.18]">
             الخطوة الصحيحة تبدأ
             <br />
             مع المورد الصحيح
