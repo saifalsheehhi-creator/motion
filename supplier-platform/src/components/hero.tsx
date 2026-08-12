@@ -1,8 +1,35 @@
-import { ArrowLeft, Compass, LineChart, Search, Truck } from "lucide-react";
+import {
+  Anchor,
+  ArrowLeft,
+  Boxes,
+  Compass,
+  Container,
+  Globe,
+  LineChart,
+  Package,
+  Plane,
+  Route,
+  Search,
+  Ship,
+  Truck,
+  Warehouse,
+} from "lucide-react";
 
 import { Counter } from "@/components/counter";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
+
+const heroDecor = [
+  { icon: Ship, side: "start", top: "8%", inset: "4%", size: 30, duration: 15, delay: 0 },
+  { icon: Container, side: "start", top: "26%", inset: "9%", size: 24, duration: 13, delay: 2 },
+  { icon: Warehouse, side: "start", top: "46%", inset: "3%", size: 28, duration: 17, delay: 1 },
+  { icon: Route, side: "start", top: "66%", inset: "8%", size: 22, duration: 14, delay: 3 },
+  { icon: Anchor, side: "start", top: "85%", inset: "5%", size: 26, duration: 16, delay: 0.6 },
+  { icon: Plane, side: "end", top: "10%", inset: "3%", size: 28, duration: 16, delay: 1.4 },
+  { icon: Package, side: "end", top: "28%", inset: "8%", size: 22, duration: 12, delay: 0.2 },
+  { icon: Globe, side: "end", top: "48%", inset: "4%", size: 34, duration: 19, delay: 2.4 },
+  { icon: Boxes, side: "end", top: "68%", inset: "9%", size: 24, duration: 13, delay: 3.2 },
+];
 
 // DOM order is right-to-left on screen (RTL): first item renders rightmost,
 // last item renders leftmost. Reading right -> left: quick search action,
@@ -96,6 +123,24 @@ export function Hero() {
         style={{ animationDelay: "-7s", animationDuration: "26s" }}
         aria-hidden
       />
+
+      <div className="pointer-events-none absolute inset-0 z-0 hidden xl:block" aria-hidden>
+        {heroDecor.map((item, i) => (
+          <item.icon
+            key={i}
+            strokeWidth={1.25}
+            className="ambient-icon absolute text-foreground/10"
+            style={{
+              top: item.top,
+              [item.side === "start" ? "insetInlineStart" : "insetInlineEnd"]: item.inset,
+              width: item.size,
+              height: item.size,
+              animationDuration: `${item.duration}s`,
+              animationDelay: `${item.delay}s`,
+            }}
+          />
+        ))}
+      </div>
 
       <div className="relative mx-auto max-w-5xl px-5 pt-14 pb-10 text-center sm:px-8 sm:pt-20">
         <Reveal className="glass-panel mx-auto rounded-[2rem] p-6 sm:p-10">
