@@ -141,24 +141,7 @@ export function Hero() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.68} className="mt-8 flex flex-wrap items-center justify-center gap-5">
-          <Button asChild size="lg">
-            <a href="#pilot">اطلب شراكة أعمال</a>
-          </Button>
-          <div className="glass flex h-[3.25rem] items-center gap-1.5 rounded-full px-2.5">
-            <a href="#" aria-label="يوتيوب" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
-              <YoutubeGlyph className="size-5" />
-            </a>
-            <a href="#" aria-label="إكس" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
-              <XGlyph className="size-5" />
-            </a>
-            <a href="#" aria-label="إنستغرام" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
-              <InstagramGlyph className="size-5" />
-            </a>
-          </div>
-        </Reveal>
-
-        <Reveal delay={0.78} className="glass mx-auto mt-10 flex max-w-lg items-center justify-center divide-x divide-white/10 rounded-full py-4">
+        <Reveal delay={0.68} className="glass mx-auto mt-8 flex max-w-lg items-center justify-center divide-x divide-white/10 rounded-full py-4">
           <div className="flex-1 px-4 text-center">
             <div className="font-mono text-xl font-semibold text-primary">
               <Counter to={99} /> د.إ
@@ -176,6 +159,23 @@ export function Hero() {
               <Counter to={8711} format /> د.إ
             </div>
             <div className="mt-1 text-xs text-muted-foreground">إيراد شهري افتراضي</div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.78} className="mt-10 flex flex-wrap items-center justify-center gap-5">
+          <Button asChild size="lg">
+            <a href="#pilot">اطلب شراكة أعمال</a>
+          </Button>
+          <div className="glass flex h-[3.25rem] items-center gap-1.5 rounded-full px-2.5">
+            <a href="#" aria-label="يوتيوب" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+              <YoutubeGlyph className="size-5" />
+            </a>
+            <a href="#" aria-label="إكس" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+              <XGlyph className="size-5" />
+            </a>
+            <a href="#" aria-label="إنستغرام" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+              <InstagramGlyph className="size-5" />
+            </a>
           </div>
         </Reveal>
       </div>
