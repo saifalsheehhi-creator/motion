@@ -76,14 +76,14 @@ export function TargetCustomer() {
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <Reveal>
             <p className="mb-3 flex items-center gap-1.5 text-sm text-muted-foreground">
-              <MapPin className="size-4 text-primary" strokeWidth={1.75} />
+              <MapPin className="size-4 text-accent-cyan" strokeWidth={1.75} />
               النطاق الجغرافي
             </p>
             <ul className="flex flex-wrap gap-2.5">
               {geography.map((g) => (
                 <li
                   key={g}
-                  className="rounded-full border border-border bg-card px-3.5 py-2 text-sm text-muted-foreground"
+                  className="glass rounded-full px-3.5 py-2 text-sm text-muted-foreground"
                 >
                   {g}
                 </li>
@@ -92,14 +92,14 @@ export function TargetCustomer() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mb-3 flex items-center gap-1.5 text-sm text-muted-foreground">
-              <Package className="size-4 text-primary" strokeWidth={1.75} />
+              <Package className="size-4 text-accent-cyan" strokeWidth={1.75} />
               فئات بداية مقترحة
             </p>
             <ul className="flex flex-wrap gap-2.5">
               {categories.map((c) => (
                 <li
                   key={c}
-                  className="rounded-full border border-border bg-card px-3.5 py-2 text-sm text-muted-foreground"
+                  className="glass rounded-full px-3.5 py-2 text-sm text-muted-foreground"
                 >
                   {c}
                 </li>

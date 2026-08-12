@@ -1,14 +1,5 @@
 import localFont from "next/font/local";
 
-export const reemKufi = localFont({
-  src: [
-    { path: "./fonts/reemar.woff2", weight: "400", style: "normal" },
-    { path: "./fonts/reemla.woff2", weight: "400", style: "normal" },
-  ],
-  variable: "--font-reem-kufi",
-  display: "swap",
-});
-
 export const plexArabic = localFont({
   src: [
     { path: "./fonts/plex400ar.woff2", weight: "400", style: "normal" },

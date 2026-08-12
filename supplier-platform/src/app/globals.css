@@ -1,116 +1,56 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
+/*
+  Single committed dark-navy theme (glassmorphism + gold), matching the
+  reference design. Not a light/dark toggle — this palette is the brand.
+*/
 :root {
-  --radius: 0.1875rem;
+  --radius: 0.625rem;
 
-  --background: #eef0e6;
-  --foreground: #15302b;
-  --card: #f8f7ef;
-  --card-foreground: #15302b;
-  --popover: #f8f7ef;
-  --popover-foreground: #15302b;
-  --primary: #a9762c;
-  --primary-foreground: #1c1204;
-  --secondary: #e5e8da;
-  --secondary-foreground: #15302b;
-  --muted: #e5e8da;
-  --muted-foreground: #68766d;
-  --accent: #e5e8da;
-  --accent-foreground: #15302b;
-  --destructive: #a1502b;
-  --destructive-foreground: #f8f7ef;
-  --border: #cfd3bf;
-  --input: #cfd3bf;
-  --ring: #a9762c;
+  --background: #0a1220;
+  --bg-alt: #0d1a30;
+  --deep: #060b16;
+  --deep-foreground: #eef2fa;
+  --deep-muted: #93a2c0;
 
-  /* extended tokens for this project */
-  --deep: #0c3234;
-  --deep-foreground: #eef0e6;
-  --deep-muted: #a9bdb6;
-  --status-good: #3f6e4f;
-  --status-good-bg: #dde8dc;
-  --status-mid: #8a6a26;
-  --status-mid-bg: #ece0c3;
-  --status-warn: #a1502b;
-  --status-warn-bg: #ecdcce;
-}
+  --foreground: #eef2fa;
+  --card: rgba(255, 255, 255, 0.045);
+  --card-foreground: #eef2fa;
+  --popover: #0d1a30;
+  --popover-foreground: #eef2fa;
 
-.dark {
-  --background: #0a2220;
-  --foreground: #eef0e6;
-  --card: #0f3532;
-  --card-foreground: #eef0e6;
-  --popover: #0f3532;
-  --popover-foreground: #eef0e6;
-  --primary: #dcaa55;
-  --primary-foreground: #1c1204;
-  --secondary: #0d2b28;
-  --secondary-foreground: #eef0e6;
-  --muted: #0d2b28;
-  --muted-foreground: #8ba59b;
-  --accent: #0d2b28;
-  --accent-foreground: #eef0e6;
-  --destructive: #d98f68;
-  --destructive-foreground: #1c1204;
-  --border: #204c47;
-  --input: #204c47;
-  --ring: #dcaa55;
+  --primary: #d9a94a;
+  --primary-foreground: #241a06;
+  --secondary: #101f38;
+  --secondary-foreground: #eef2fa;
+  --muted: #101f38;
+  --muted-foreground: #8ea0c4;
+  --accent-cyan: #38b6d6;
+  --accent-cyan-foreground: #06212a;
 
-  --deep: #071a19;
-  --deep-foreground: #eef0e6;
-  --deep-muted: #8fa79e;
-  --status-good: #8fbf9c;
-  --status-good-bg: #123a2c;
-  --status-mid: #d9b463;
-  --status-mid-bg: #332810;
-  --status-warn: #d98f68;
-  --status-warn-bg: #3a2417;
-}
+  --destructive: #e08a63;
+  --destructive-foreground: #241206;
+  --border: rgba(255, 255, 255, 0.12);
+  --input: rgba(255, 255, 255, 0.14);
+  --ring: #d9a94a;
 
-@media (prefers-color-scheme: dark) {
-  :root:not(.light):not(.dark) {
-    --background: #0a2220;
-    --foreground: #eef0e6;
-    --card: #0f3532;
-    --card-foreground: #eef0e6;
-    --popover: #0f3532;
-    --popover-foreground: #eef0e6;
-    --primary: #dcaa55;
-    --primary-foreground: #1c1204;
-    --secondary: #0d2b28;
-    --secondary-foreground: #eef0e6;
-    --muted: #0d2b28;
-    --muted-foreground: #8ba59b;
-    --accent: #0d2b28;
-    --accent-foreground: #eef0e6;
-    --destructive: #d98f68;
-    --destructive-foreground: #1c1204;
-    --border: #204c47;
-    --input: #204c47;
-    --ring: #dcaa55;
-
-    --deep: #071a19;
-    --deep-foreground: #eef0e6;
-    --deep-muted: #8fa79e;
-    --status-good: #8fbf9c;
-    --status-good-bg: #123a2c;
-    --status-mid: #d9b463;
-    --status-mid-bg: #332810;
-    --status-warn: #d98f68;
-    --status-warn-bg: #3a2417;
-  }
+  --status-good: #7fd4a8;
+  --status-good-bg: rgba(58, 196, 128, 0.14);
+  --status-mid: #e0bd6a;
+  --status-mid-bg: rgba(224, 189, 106, 0.14);
+  --status-warn: #e5926a;
+  --status-warn-bg: rgba(229, 146, 106, 0.14);
 }
 
 @theme inline {
-  --radius-sm: calc(var(--radius) - 2px);
-  --radius-md: var(--radius);
-  --radius-lg: calc(var(--radius) + 4px);
-  --radius-xl: calc(var(--radius) + 8px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
 
   --color-background: var(--background);
+  --color-bg-alt: var(--bg-alt);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
@@ -122,8 +62,8 @@
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-cyan-foreground: var(--accent-cyan-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -140,7 +80,6 @@
   --color-status-warn: var(--status-warn);
   --color-status-warn-bg: var(--status-warn-bg);
 
-  --font-kufi: var(--font-reem-kufi), ui-sans-serif, sans-serif;
   --font-body: var(--font-plex-arabic), ui-sans-serif, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 }
@@ -151,14 +90,21 @@
   }
   html {
     background: var(--background);
+    color-scheme: dark;
   }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    background-image: radial-gradient(
+      70% 50% at 50% 0%,
+      color-mix(in srgb, var(--accent-cyan) 7%, transparent),
+      transparent 70%
+    );
+    background-repeat: no-repeat;
   }
-  h1, h2, h3, .font-kufi {
-    font-family: var(--font-kufi);
-    font-weight: 400;
+  h1, h2, h3 {
+    font-family: var(--font-body);
+    font-weight: 700;
     text-wrap: balance;
   }
   .font-mono, .tabular-nums {
@@ -168,6 +114,13 @@
 }
 
 @layer utilities {
+  .glass {
+    background: var(--card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+  }
+
   .reveal {
     opacity: 0;
     filter: blur(5px);

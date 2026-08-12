@@ -51,8 +51,8 @@ export function Pricing() {
               key={plan.name}
               delay={0.08 * i}
               className={cn(
-                "flex flex-col gap-3.5 rounded-md border bg-card p-6",
-                plan.featured ? "border-primary ring-1 ring-primary" : "border-border/70"
+                "glass flex flex-col gap-3.5 rounded-2xl p-6",
+                plan.featured && "border-primary/60 ring-1 ring-primary"
               )}
             >
               <div className="text-sm text-muted-foreground">{plan.name}</div>
@@ -72,7 +72,7 @@ export function Pricing() {
           ))}
         </div>
 
-        <Reveal className="mt-7 rounded-md border border-border bg-card px-6 py-5 border-s-[3px] border-s-primary">
+        <Reveal className="mt-7 glass rounded-2xl px-6 py-5 border-s-[3px] border-s-primary">
           <p className="text-sm text-muted-foreground">
             <strong className="font-semibold text-foreground">التسعير النهائي لا يُعتمد قبل التجربة.</strong>{" "}
             الأسئلة المهمة للتجار: هل سيدفعون؟ وكم؟ وما عدد الموردين أو التقارير الذي يعتبرونه

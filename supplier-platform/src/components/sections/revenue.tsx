@@ -68,7 +68,7 @@ export function Revenue() {
 
         <Reveal
           delay={0.1}
-          className="mt-6 rounded-md border border-border bg-card px-6 py-5 border-s-[3px] border-s-destructive"
+          className="mt-6 glass rounded-2xl px-6 py-5 border-s-[3px] border-s-destructive"
         >
           <p className="text-sm text-muted-foreground">
             <strong className="font-semibold text-foreground">هذا إيراد وليس ربحاً صافياً.</strong>{" "}
@@ -81,7 +81,7 @@ export function Revenue() {
           {opsTags.map((t) => (
             <span
               key={t}
-              className="rounded-full border border-border bg-card px-3.5 py-2 text-sm text-muted-foreground"
+              className="glass rounded-full px-3.5 py-2 text-sm text-muted-foreground"
             >
               {t}
             </span>

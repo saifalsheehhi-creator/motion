@@ -15,11 +15,11 @@ export function Conclusion() {
         </Reveal>
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
-          <Reveal className="rounded-md border border-border/70 bg-card p-6">
+          <Reveal className="glass rounded-2xl p-6">
             <h3 className="mb-2 text-lg">الهدف الأول</h3>
             <p className="text-sm text-muted-foreground">5 عملاء مدفوعين وتجربة 10 طلبات حقيقية.</p>
           </Reveal>
-          <Reveal delay={0.1} className="rounded-md border border-border/70 bg-card p-6">
+          <Reveal delay={0.1} className="glass rounded-2xl p-6">
             <h3 className="mb-2 text-lg">شرط التوسّع</h3>
             <p className="text-sm text-muted-foreground">
               جودة ثابتة، تكلفة تنفيذ منضبطة، وطلب متكرر من العملاء.
@@ -35,7 +35,7 @@ export function Conclusion() {
 
         <Reveal
           delay={0.2}
-          className="mt-10 rounded-md border border-border bg-card px-6 py-5 border-s-[3px] border-s-primary text-sm text-muted-foreground"
+          className="mt-10 glass rounded-2xl px-6 py-5 border-s-[3px] border-s-primary text-sm text-muted-foreground"
         >
           هذا المشروع خدمة بحث ومعلومات وتحليل أولي، وليس ضماناً للمورد أو للبضاعة أو لإتمام
           الصفقة. الفحص النهائي، العينات، العقود، الدفع والشحن تبقى مسؤولية الأطراف المختصة.

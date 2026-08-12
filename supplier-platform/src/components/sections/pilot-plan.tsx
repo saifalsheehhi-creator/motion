@@ -91,7 +91,7 @@ export function PilotPlan() {
           </Reveal>
           <Reveal
             delay={0.15}
-            className="rounded-md border border-border bg-card px-6 py-5 border-s-[3px] border-s-primary text-sm text-muted-foreground"
+            className="glass rounded-2xl px-6 py-5 border-s-[3px] border-s-primary text-sm text-muted-foreground"
           >
             <strong className="font-semibold text-foreground">قرار البداية المقترح:</strong>{" "}
             نعرض نموذج تقرير واحد، نجمع طلبات حقيقية من التجار، ننفذها شبه يدوياً بمساعدة الذكاء

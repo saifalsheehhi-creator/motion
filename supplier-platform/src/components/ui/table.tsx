@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 function Table({ className, ...props }: React.ComponentProps<"table">) {
   return (
-    <div className="relative w-full overflow-x-auto rounded-md border border-border">
+    <div className="glass relative w-full overflow-x-auto rounded-2xl backdrop-blur-xl">
       <table
         data-slot="table"
         className={cn("w-full caption-bottom text-sm min-w-[560px]", className)}

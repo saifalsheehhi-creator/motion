@@ -21,16 +21,16 @@ export function ProblemSolution() {
         />
 
         <div className="grid gap-5 sm:grid-cols-2">
-          <Reveal className="rounded-md border border-border/70 bg-card p-6">
-            <Search className="mb-3.5 size-6 text-primary" strokeWidth={1.75} />
+          <Reveal className="glass rounded-2xl p-6">
+            <Search className="mb-3.5 size-6 text-accent-cyan" strokeWidth={1.75} />
             <h3 className="mb-2 text-lg">المشكلة</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
               التاجر يُضيّع وقتاً بين المواقع والموردين، والأسعار الظاهرة لا تشمل دائماً الشحن أو
               الحد الأدنى للطلب، كما يصعب فرز المورد الحقيقي من النتيجة الضعيفة.
             </p>
           </Reveal>
-          <Reveal delay={0.15} className="rounded-md border border-border/70 bg-card p-6">
-            <Compass className="mb-3.5 size-6 text-primary" strokeWidth={1.75} />
+          <Reveal delay={0.15} className="glass rounded-2xl p-6">
+            <Compass className="mb-3.5 size-6 text-accent-cyan" strokeWidth={1.75} />
             <h3 className="mb-2 text-lg">الحل</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
               طلب واحد يدخل للمنصة، ثم يحصل العميل على موردين مرتبين حسب السعر والثقة والملاءمة،
@@ -41,7 +41,7 @@ export function ProblemSolution() {
 
         <Reveal
           delay={0.1}
-          className="relative mt-6 rounded-md border border-dashed border-border bg-card px-6 py-6 sm:px-7"
+          className="relative mt-6 glass rounded-2xl border-dashed px-6 py-6 sm:px-7"
         >
           <span className="absolute -top-2.5 end-6 rounded-full bg-primary px-2.5 py-1 font-mono text-[0.7rem] font-semibold text-primary-foreground">
             مثال طلب عميل
@@ -58,9 +58,9 @@ export function ProblemSolution() {
             {reasons.map((r) => (
               <li
                 key={r}
-                className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-2 text-sm text-muted-foreground"
+                className="inline-flex items-center gap-1.5 glass rounded-full px-3.5 py-2 text-sm text-muted-foreground"
               >
-                <CircleCheck className="size-3.5 text-primary" strokeWidth={2} />
+                <CircleCheck className="size-3.5 text-accent-cyan" strokeWidth={2} />
                 {r}
               </li>
             ))}

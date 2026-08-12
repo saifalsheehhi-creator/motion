@@ -69,12 +69,12 @@ export function HowItWorks() {
         </Reveal>
 
         <div className="mt-9 grid gap-6 sm:grid-cols-2">
-          <Reveal className="overflow-hidden rounded-md border border-border/70">
-            <div className="flex items-center gap-2 bg-deep px-5 py-3.5 text-sm font-semibold text-deep-foreground">
+          <Reveal className="glass overflow-hidden rounded-2xl">
+            <div className="flex items-center gap-2 bg-accent-cyan/15 px-5 py-3.5 text-sm font-semibold text-accent-cyan">
               <Bot className="size-4" strokeWidth={1.9} />
               يقوم به النظام الذكي
             </div>
-            <ul className="flex flex-col gap-2.5 bg-card p-5">
+            <ul className="flex flex-col gap-2.5 p-5">
               {aiWork.map((w) => (
                 <li key={w} className="ps-4 text-sm text-muted-foreground relative before:absolute before:start-0 before:content-['—'] before:text-primary">
                   {w}
@@ -82,12 +82,12 @@ export function HowItWorks() {
               ))}
             </ul>
           </Reveal>
-          <Reveal delay={0.15} className="overflow-hidden rounded-md border border-border/70">
+          <Reveal delay={0.15} className="glass overflow-hidden rounded-2xl">
             <div className="flex items-center gap-2 bg-primary/15 px-5 py-3.5 text-sm font-semibold text-primary">
               <UserRound className="size-4" strokeWidth={1.9} />
               يحتاج مراجعة بشرية
             </div>
-            <ul className="flex flex-col gap-2.5 bg-card p-5">
+            <ul className="flex flex-col gap-2.5 p-5">
               {humanWork.map((w) => (
                 <li key={w} className="ps-4 text-sm text-muted-foreground relative before:absolute before:start-0 before:content-['—'] before:text-primary">
                   {w}

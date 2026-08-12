@@ -55,15 +55,16 @@ const footerLinks: FooterSection[] = [
 
 function BrandMark({ className }: { className?: string }) {
   return (
-    <svg
-      className={className}
-      viewBox="0 0 32 32"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.6}
-    >
-      <rect x="6" y="6" width="20" height="20" rx="2" transform="rotate(45 16 16)" />
-      <circle cx="16" cy="16" r="4.2" fill="currentColor" stroke="none" />
+    <svg className={className} viewBox="0 0 32 32" fill="none">
+      <defs>
+        <linearGradient id="footerBrandGradient" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#5fd0ea" />
+          <stop offset="1" stopColor="#2f6fd1" />
+        </linearGradient>
+      </defs>
+      <path d="M16 2 28 9v14l-12 7-12-7V9Z" fill="url(#footerBrandGradient)" />
+      <path d="M16 2v14L4 9Z" fill="#ffffff" fillOpacity="0.22" />
+      <path d="M16 16 4 23l12 7 12-7Z" fill="#04101f" fillOpacity="0.18" />
     </svg>
   );
 }
@@ -88,7 +89,7 @@ export function Footer() {
         <AnimatedContainer className="space-y-4">
           <a href="#top" className="inline-flex items-center gap-2">
             <BrandMark className="size-7 text-primary" />
-            <span className="font-kufi text-lg">منصّة الموردين</span>
+            <span className="text-lg font-bold">منصّة الموردين</span>
           </a>
           <p className="text-deep-muted mt-8 max-w-[30ch] text-sm md:mt-4">
             منصة رقمية تساعد التجار على الوصول إلى موردين مناسبين — بتقرير واحد منظم، بدل أيام من

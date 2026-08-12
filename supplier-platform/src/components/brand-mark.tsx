@@ -1,14 +1,18 @@
 export function BrandMark({ className }: { className?: string }) {
   return (
-    <svg
-      className={className}
-      viewBox="0 0 32 32"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.6}
-    >
-      <rect x="6" y="6" width="20" height="20" rx="2" transform="rotate(45 16 16)" />
-      <circle cx="16" cy="16" r="4.2" fill="currentColor" stroke="none" />
+    <svg className={className} viewBox="0 0 32 32" fill="none">
+      <defs>
+        <linearGradient id="brandGradient" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#5fd0ea" />
+          <stop offset="1" stopColor="#2f6fd1" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M16 2 28 9v14l-12 7-12-7V9Z"
+        fill="url(#brandGradient)"
+      />
+      <path d="M16 2v14L4 9Z" fill="#ffffff" fillOpacity="0.22" />
+      <path d="M16 16 4 23l12 7 12-7Z" fill="#04101f" fillOpacity="0.18" />
     </svg>
   );
 }
