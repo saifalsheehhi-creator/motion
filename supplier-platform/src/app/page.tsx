@@ -1,5 +1,6 @@
 import { Footer } from "@/components/ui/footer-section";
 import { Hero } from "@/components/hero";
+import { SideDecor } from "@/components/side-decor";
 import { SiteHeader } from "@/components/site-header";
 import { Conclusion } from "@/components/sections/conclusion";
 import { HowItWorks } from "@/components/sections/how-it-works";
@@ -13,9 +14,10 @@ import { TargetCustomer } from "@/components/sections/target-customer";
 
 export default function Home() {
   return (
-    <div id="top" className="flex flex-1 flex-col">
+    <div id="top" className="relative flex flex-1 flex-col">
+      <SideDecor />
       <SiteHeader />
-      <main className="flex-1">
+      <main className="relative flex-1">
         <Hero />
         <ProblemSolution />
         <TargetCustomer />

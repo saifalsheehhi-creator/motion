@@ -184,6 +184,13 @@
     filter: blur(60px);
     animation: ambient-drift 22s ease-in-out infinite alternate;
   }
+
+  .ambient-icon {
+    animation-name: icon-drift;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
 }
 
 @keyframes cta-sweep {
@@ -201,6 +208,15 @@
   }
   100% {
     transform: translate(3%, 4%) scale(1.08);
+  }
+}
+
+@keyframes icon-drift {
+  0% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  100% {
+    transform: translateY(-22px) rotate(4deg);
   }
 }
 
@@ -222,7 +238,8 @@
     animation: none !important;
     display: none;
   }
-  .ambient-blob {
+  .ambient-blob,
+  .ambient-icon {
     animation: none !important;
   }
 }
