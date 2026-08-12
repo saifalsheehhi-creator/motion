@@ -98,27 +98,23 @@ export function Hero() {
       />
 
       <div className="relative mx-auto max-w-5xl px-5 pt-14 pb-10 text-center sm:px-8 sm:pt-20">
-        <Reveal>
+        <Reveal className="glass-panel mx-auto rounded-[2rem] p-6 sm:p-10">
           <h1 className="text-[2rem] leading-[1.3] sm:text-5xl lg:text-[3.1rem] lg:leading-[1.25]">
             الخطوة الصحيحة تبدأ
             <br />
             مع المورد الصحيح
           </h1>
-        </Reveal>
 
-        <Reveal delay={0.14}>
           <p className="mx-auto mt-5 max-w-[46ch] text-base text-muted-foreground sm:text-lg">
             خدمة رقمية تساعد التجار على الوصول إلى موردين مناسبين، مقارنة التكلفة الفعلية، وتقييم
             المخاطر الأولية — في تقرير واحد منظم.
           </p>
-        </Reveal>
 
-        <Reveal delay={0.22} className="glass-panel mx-auto mt-9 rounded-[2rem] p-4 sm:p-6">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {boxes.map((b, i) => (
               <Reveal
                 key={b.title}
-                delay={0.34 + 0.08 * i}
+                delay={0.2 + 0.08 * i}
                 className="glass card-hover flex flex-col items-center gap-2.5 rounded-2xl px-5 py-6 text-center"
               >
                 <span className={`card-hover-icon flex size-14 items-center justify-center rounded-full ${b.badge}`}>
