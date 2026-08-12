@@ -95,7 +95,13 @@
   body {
     @apply text-foreground;
     font-family: var(--font-body);
-    background: linear-gradient(135deg, #142744, #2d4d80, #4d6a9c);
+    background: radial-gradient(
+      ellipse 65% 55% at 50% 50%,
+      #2d4d80 0%,
+      #1c355c 50%,
+      #0a1830 85%,
+      #071120 100%
+    );
     background-attachment: fixed;
   }
   h1, h2, h3 {
