@@ -1,33 +1,43 @@
-import { Compass, LineChart, Search, Truck } from "lucide-react";
+import { ArrowLeft, Compass, LineChart, Search, Truck } from "lucide-react";
 
 import { Counter } from "@/components/counter";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 
 // DOM order is right-to-left on screen (RTL): first item renders rightmost,
-// last item renders leftmost — ordered here so the on-screen reading is
-// Search / Risk / Logistics, left to right.
-const features = [
+// last item renders leftmost. Reading right -> left: quick search action,
+// then the three feature cards (Search / Risk / Logistics).
+const boxes = [
   {
-    icon: Truck,
-    badge: "bg-white/10 text-foreground",
-    titleEn: "Logistics Facilitation",
-    title: "تسهيل لوجستي",
-    body: "مقارنة الشحن والحد الأدنى للطلب والتكلفة التقريبية حتى وصولها للإمارات.",
+    kind: "action" as const,
+    icon: Search,
+    badge: "bg-primary/15 text-primary",
+    titleEn: "Quick Search",
+    title: "ابحث الآن",
   },
   {
-    icon: LineChart,
-    badge: "bg-accent-cyan/15 text-accent-cyan",
-    titleEn: "Risk Assessment Reports",
-    title: "تقارير تقييم المخاطر",
-    body: "تحقق أولي ومؤشرات خطر واضحة قبل ما تتواصل مع أي مورد أو تلتزم بشيء.",
-  },
-  {
+    kind: "feature" as const,
     icon: Compass,
     badge: "bg-primary/15 text-primary",
     titleEn: "Comprehensive Search",
     title: "بحث شامل",
-    body: "بحث منظّم يغطي المصادر المناسبة لكل فئة ومنطقة، بدل تصفح عشرات المواقع يدوياً.",
+    body: "بحث منظّم يغطي المصادر المناسبة لكل فئة ومنطقة.",
+  },
+  {
+    kind: "feature" as const,
+    icon: LineChart,
+    badge: "bg-accent-cyan/15 text-accent-cyan",
+    titleEn: "Risk Assessment",
+    title: "تقييم المخاطر",
+    body: "تحقق أولي ومؤشرات خطر قبل ما تتواصل مع أي مورد.",
+  },
+  {
+    kind: "feature" as const,
+    icon: Truck,
+    badge: "bg-white/10 text-foreground",
+    titleEn: "Logistics Facilitation",
+    title: "تسهيل لوجستي",
+    body: "مقارنة الشحن والحد الأدنى للطلب حتى الإمارات.",
   },
 ];
 
@@ -87,7 +97,7 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-4xl px-5 pt-14 pb-10 text-center sm:px-8 sm:pt-20">
+      <div className="relative mx-auto max-w-5xl px-5 pt-14 pb-10 text-center sm:px-8 sm:pt-20">
         <Reveal>
           <h1 className="text-[2rem] leading-[1.3] sm:text-5xl lg:text-[3.1rem] lg:leading-[1.25]">
             الخطوة الصحيحة تبدأ
@@ -103,34 +113,32 @@ export function Hero() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.26} className="mx-auto mt-8 max-w-xl">
-          <div className="glass flex items-center gap-2 rounded-full p-2 ps-2 pe-5">
-            <Button asChild size="icon" className="shrink-0">
-              <a href="#pilot" aria-label="ابدأ البحث">
-                <Search className="size-4" strokeWidth={2} />
-              </a>
-            </Button>
-            <span className="flex-1 text-start text-sm text-muted-foreground">
-              ابحث عن المورد الصحيح...
-            </span>
-          </div>
-        </Reveal>
-
-        <div className="mx-auto mt-8 grid gap-4 sm:grid-cols-3">
-          {features.map((f, i) => (
+        <div className="mx-auto mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {boxes.map((b, i) => (
             <Reveal
-              key={f.title}
-              delay={0.38 + 0.1 * i}
+              key={b.title}
+              delay={0.28 + 0.08 * i}
               className="glass card-hover flex flex-col items-center gap-2.5 rounded-2xl px-5 py-6 text-center"
             >
-              <span className={`card-hover-icon flex size-14 items-center justify-center rounded-full ${f.badge}`}>
-                <f.icon className="size-6" strokeWidth={1.75} />
+              <span className={`card-hover-icon flex size-14 items-center justify-center rounded-full ${b.badge}`}>
+                <b.icon className="size-6" strokeWidth={1.75} />
               </span>
               <span className="font-mono text-[0.68rem] tracking-wide text-muted-foreground uppercase">
-                {f.titleEn}
+                {b.titleEn}
               </span>
-              <h3 className="text-base">{f.title}</h3>
-              <p className="text-sm text-muted-foreground">{f.body}</p>
+              <h3 className="text-base">{b.title}</h3>
+
+              {b.kind === "action" ? (
+                <a
+                  href="#pilot"
+                  className="mt-1 flex w-full items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-start text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground"
+                >
+                  <span className="flex-1">صف المنتج اللي تدور عليه...</span>
+                  <ArrowLeft className="size-3.5 shrink-0" strokeWidth={2} />
+                </a>
+              ) : (
+                <p className="text-sm text-muted-foreground">{b.body}</p>
+              )}
             </Reveal>
           ))}
         </div>
