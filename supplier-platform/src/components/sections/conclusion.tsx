@@ -15,11 +15,11 @@ export function Conclusion() {
         </Reveal>
 
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
-          <Reveal className="glass rounded-2xl p-6">
+          <Reveal className="glass card-hover rounded-2xl p-6">
             <h3 className="mb-2 text-lg">الهدف الأول</h3>
             <p className="text-sm text-muted-foreground">5 عملاء مدفوعين وتجربة 10 طلبات حقيقية.</p>
           </Reveal>
-          <Reveal delay={0.1} className="glass rounded-2xl p-6">
+          <Reveal delay={0.1} className="glass card-hover rounded-2xl p-6">
             <h3 className="mb-2 text-lg">شرط التوسّع</h3>
             <p className="text-sm text-muted-foreground">
               جودة ثابتة، تكلفة تنفيذ منضبطة، وطلب متكرر من العملاء.

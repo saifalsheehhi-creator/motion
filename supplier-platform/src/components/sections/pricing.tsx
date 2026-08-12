@@ -51,7 +51,7 @@ export function Pricing() {
               key={plan.name}
               delay={0.08 * i}
               className={cn(
-                "glass flex flex-col gap-3.5 rounded-2xl p-6",
+                "glass card-hover flex flex-col gap-3.5 rounded-2xl p-6",
                 plan.featured && "border-primary/60 ring-1 ring-primary"
               )}
             >

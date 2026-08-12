@@ -21,7 +21,7 @@ export function ProblemSolution() {
         />
 
         <div className="grid gap-5 sm:grid-cols-2">
-          <Reveal className="glass rounded-2xl p-6">
+          <Reveal className="glass card-hover rounded-2xl p-6">
             <Search className="mb-3.5 size-6 text-accent-cyan" strokeWidth={1.75} />
             <h3 className="mb-2 text-lg">المشكلة</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">
@@ -29,7 +29,7 @@ export function ProblemSolution() {
               الحد الأدنى للطلب، كما يصعب فرز المورد الحقيقي من النتيجة الضعيفة.
             </p>
           </Reveal>
-          <Reveal delay={0.15} className="glass rounded-2xl p-6">
+          <Reveal delay={0.15} className="glass card-hover rounded-2xl p-6">
             <Compass className="mb-3.5 size-6 text-accent-cyan" strokeWidth={1.75} />
             <h3 className="mb-2 text-lg">الحل</h3>
             <p className="text-sm leading-relaxed text-muted-foreground">

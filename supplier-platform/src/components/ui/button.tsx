@@ -37,10 +37,11 @@ function Button({
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & { asChild?: boolean }) {
   const Comp = asChild ? Slot : "button";
+  const shimmer = (variant ?? "default") === "default" && size !== "icon";
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, className }), shimmer && "cta-shimmer")}
       {...props}
     />
   );

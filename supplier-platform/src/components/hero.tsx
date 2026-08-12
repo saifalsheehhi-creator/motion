@@ -77,6 +77,15 @@ export function Hero() {
           maskImage: "radial-gradient(60% 60% at 50% 20%, black, transparent)",
         }}
       />
+      <div
+        className="ambient-blob pointer-events-none -top-16 start-[8%] size-72 bg-accent-cyan/20"
+        aria-hidden
+      />
+      <div
+        className="ambient-blob pointer-events-none top-40 end-[6%] size-64 bg-primary/15"
+        style={{ animationDelay: "-7s", animationDuration: "26s" }}
+        aria-hidden
+      />
 
       <div className="relative mx-auto max-w-4xl px-5 pt-14 pb-10 text-center sm:px-8 sm:pt-20">
         <Reveal>
@@ -87,14 +96,14 @@ export function Hero() {
           </h1>
         </Reveal>
 
-        <Reveal delay={0.12}>
+        <Reveal delay={0.14}>
           <p className="mx-auto mt-5 max-w-[46ch] text-base text-muted-foreground sm:text-lg">
             خدمة رقمية تساعد التجار على الوصول إلى موردين مناسبين، مقارنة التكلفة الفعلية، وتقييم
             المخاطر الأولية — في تقرير واحد منظم.
           </p>
         </Reveal>
 
-        <Reveal delay={0.2} className="mx-auto mt-8 max-w-xl">
+        <Reveal delay={0.26} className="mx-auto mt-8 max-w-xl">
           <div className="glass flex items-center gap-2 rounded-full p-2 ps-2 pe-5">
             <Button asChild size="icon" className="shrink-0">
               <a href="#pilot" aria-label="ابدأ البحث">
@@ -111,10 +120,10 @@ export function Hero() {
           {features.map((f, i) => (
             <Reveal
               key={f.title}
-              delay={0.1 * i}
-              className="glass flex flex-col items-center gap-2.5 rounded-2xl px-5 py-6 text-center"
+              delay={0.38 + 0.1 * i}
+              className="glass card-hover flex flex-col items-center gap-2.5 rounded-2xl px-5 py-6 text-center"
             >
-              <span className={`flex size-14 items-center justify-center rounded-full ${f.badge}`}>
+              <span className={`card-hover-icon flex size-14 items-center justify-center rounded-full ${f.badge}`}>
                 <f.icon className="size-6" strokeWidth={1.75} />
               </span>
               <span className="font-mono text-[0.68rem] tracking-wide text-muted-foreground uppercase">
@@ -126,7 +135,7 @@ export function Hero() {
           ))}
         </div>
 
-        <Reveal delay={0.15} className="mt-8 flex flex-wrap items-center justify-center gap-5">
+        <Reveal delay={0.68} className="mt-8 flex flex-wrap items-center justify-center gap-5">
           <Button asChild size="lg">
             <a href="#pilot">اطلب شراكة أعمال</a>
           </Button>
@@ -143,7 +152,7 @@ export function Hero() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.2} className="glass mx-auto mt-10 flex max-w-lg items-center justify-center divide-x divide-white/10 rounded-full py-4">
+        <Reveal delay={0.78} className="glass mx-auto mt-10 flex max-w-lg items-center justify-center divide-x divide-white/10 rounded-full py-4">
           <div className="flex-1 px-4 text-center">
             <div className="font-mono text-xl font-semibold text-primary">
               <Counter to={99} /> د.إ
