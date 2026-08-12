@@ -27,7 +27,7 @@ export function SiteHeader() {
     <header
       className={cn(
         "glass sticky top-0 z-50 rounded-none border-x-0 border-t-0 transition-shadow duration-300",
-        scrolled && "shadow-[0_8px_24px_-16px_rgba(0,0,0,0.5)]"
+        scrolled && "shadow-[0_8px_24px_-16px_rgba(28,18,6,0.6)]"
       )}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-4 sm:px-8">
@@ -46,7 +46,7 @@ export function SiteHeader() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-base text-foreground/70 transition-colors hover:text-foreground"
+                className="text-base text-foreground/70 transition-[color,transform] hover:text-foreground active:scale-[0.97] inline-block"
               >
                 {l.label}
               </a>

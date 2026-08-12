@@ -173,7 +173,7 @@ export function Hero() {
                 {b.kind === "action" ? (
                   <a
                     href="#pilot"
-                    className="mt-1 flex w-full items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3.5 py-2 text-start text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground"
+                    className="mt-1 flex w-full items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3.5 py-2 text-start text-xs text-muted-foreground transition-[color,border-color,transform] hover:border-primary/50 hover:text-foreground active:scale-[0.97]"
                   >
                     <span className="flex-1">صف المنتج اللي تدور عليه...</span>
                     <ArrowLeft className="size-3.5 shrink-0" strokeWidth={2} />
@@ -212,13 +212,13 @@ export function Hero() {
             <a href="#pilot">اطلب شراكة أعمال</a>
           </Button>
           <div className="glass flex h-[3.25rem] items-center gap-1.5 rounded-full px-2.5">
-            <a href="#" aria-label="يوتيوب" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+            <a href="#" aria-label="يوتيوب" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-[color,transform] hover:text-foreground active:scale-[0.9]">
               <YoutubeGlyph className="size-5" />
             </a>
-            <a href="#" aria-label="إكس" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+            <a href="#" aria-label="إكس" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-[color,transform] hover:text-foreground active:scale-[0.9]">
               <XGlyph className="size-5" />
             </a>
-            <a href="#" aria-label="إنستغرام" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+            <a href="#" aria-label="إنستغرام" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-[color,transform] hover:text-foreground active:scale-[0.9]">
               <InstagramGlyph className="size-5" />
             </a>
           </div>

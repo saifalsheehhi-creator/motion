@@ -17,7 +17,7 @@ export default function Home() {
     <div id="top" className="relative flex flex-1 flex-col">
       <SideDecor />
       <SiteHeader />
-      <main className="relative flex-1">
+      <main id="main" className="relative flex-1">
         <Hero />
         <ProblemSolution />
         <TargetCustomer />

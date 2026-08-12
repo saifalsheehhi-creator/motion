@@ -40,6 +40,8 @@ const footerLinks: FooterSection[] = [
       { title: "سياسة الاستخدام العادلة", href: "#pricing" },
       { title: "قاعدة الشفافية", href: "#report" },
       { title: "تنويه مهم", href: "#conclusion" },
+      { title: "سياسة الخصوصية", href: "/privacy" },
+      { title: "الشروط والأحكام", href: "/terms" },
     ],
   },
   {
@@ -115,7 +117,7 @@ export function Footer() {
                     <li key={link.title}>
                       <a
                         href={link.href}
-                        className="hover:text-primary inline-flex items-center gap-1.5 text-deep-foreground/85 transition-all duration-300"
+                        className="hover:text-primary inline-flex items-center gap-1.5 text-deep-foreground/85 transition-all duration-300 active:scale-[0.97]"
                       >
                         {link.icon && <link.icon className="size-4" />}
                         {link.title}
