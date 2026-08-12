@@ -26,27 +26,27 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b border-transparent bg-background/70 backdrop-blur-xl transition-colors duration-300",
-        scrolled && "border-white/10 shadow-[0_1px_0_rgba(255,255,255,0.06)]"
+        "glass sticky top-0 z-50 rounded-none border-x-0 border-t-0 transition-shadow duration-300",
+        scrolled && "shadow-[0_8px_24px_-16px_rgba(0,0,0,0.5)]"
       )}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-3 sm:px-8">
-        <a href="#top" className="inline-flex items-center gap-2">
-          <BrandMark className="size-10" />
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-4 sm:px-8">
+        <a href="#top" className="inline-flex items-center gap-2.5">
+          <BrandMark className="size-12" />
           <span className="flex flex-col items-start leading-none">
-            <span className="text-2xl font-bold">مورد</span>
-            <span className="mt-0.5 font-mono text-xs tracking-wide text-muted-foreground">
+            <span className="text-[1.75rem] font-bold">مورد</span>
+            <span className="mt-1 font-mono text-sm tracking-wide text-muted-foreground">
               Maward
             </span>
           </span>
         </a>
 
-        <ul className="hidden items-center gap-7 md:flex">
+        <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm text-foreground/70 transition-colors hover:text-foreground"
+                className="text-base text-foreground/70 transition-colors hover:text-foreground"
               >
                 {l.label}
               </a>
@@ -54,7 +54,7 @@ export function SiteHeader() {
           ))}
         </ul>
 
-        <Button asChild size="sm" variant="ghost">
+        <Button asChild variant="ghost">
           <a href="#pilot">ابدأ المورد الصحيح</a>
         </Button>
       </div>
