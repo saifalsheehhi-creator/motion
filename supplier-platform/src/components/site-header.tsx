@@ -32,10 +32,10 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-3 sm:px-8">
         <a href="#top" className="inline-flex items-center gap-2">
-          <BrandMark className="size-8" />
+          <BrandMark className="size-10" />
           <span className="flex flex-col items-start leading-none">
-            <span className="text-base font-bold">مورد</span>
-            <span className="-mt-0.5 font-mono text-[0.65rem] tracking-wide text-muted-foreground">
+            <span className="text-2xl font-bold">مورد</span>
+            <span className="mt-0.5 font-mono text-xs tracking-wide text-muted-foreground">
               Maward
             </span>
           </span>

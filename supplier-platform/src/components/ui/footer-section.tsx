@@ -88,10 +88,10 @@ export function Footer() {
       <div className="mx-auto grid w-full max-w-6xl gap-8 xl:grid-cols-3 xl:gap-8">
         <AnimatedContainer className="space-y-4">
           <a href="#top" className="inline-flex items-center gap-2">
-            <BrandMark className="size-8" />
+            <BrandMark className="size-10" />
             <span className="flex flex-col items-start leading-none">
-              <span className="text-lg font-bold">مورد</span>
-              <span className="-mt-0.5 font-mono text-[0.68rem] tracking-wide text-deep-muted">
+              <span className="text-2xl font-bold">مورد</span>
+              <span className="mt-0.5 font-mono text-xs tracking-wide text-deep-muted">
                 Maward
               </span>
             </span>

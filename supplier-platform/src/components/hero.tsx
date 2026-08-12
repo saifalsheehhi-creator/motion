@@ -145,15 +145,15 @@ export function Hero() {
           <Button asChild size="lg">
             <a href="#pilot">اطلب شراكة أعمال</a>
           </Button>
-          <div className="glass flex items-center gap-1 rounded-full p-1.5">
-            <a href="#" aria-label="يوتيوب" className="flex size-8 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
-              <YoutubeGlyph className="size-4" />
+          <div className="glass flex h-[3.25rem] items-center gap-1.5 rounded-full px-2.5">
+            <a href="#" aria-label="يوتيوب" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+              <YoutubeGlyph className="size-5" />
             </a>
-            <a href="#" aria-label="إكس" className="flex size-8 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
-              <XGlyph className="size-4" />
+            <a href="#" aria-label="إكس" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+              <XGlyph className="size-5" />
             </a>
-            <a href="#" aria-label="إنستغرام" className="flex size-8 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
-              <InstagramGlyph className="size-4" />
+            <a href="#" aria-label="إنستغرام" className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground">
+              <InstagramGlyph className="size-5" />
             </a>
           </div>
         </Reveal>
