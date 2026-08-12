@@ -2,37 +2,37 @@
 @import "tw-animate-css";
 
 /*
-  Single committed dark-navy theme (glassmorphism + gold), matching the
+  Single committed vivid-blue theme (glassmorphism + gold), matching the
   reference design. Not a light/dark toggle — this palette is the brand.
 */
 :root {
   --radius: 0.625rem;
 
-  --background: #0b1a33;
-  --bg-alt: #0f2242;
-  --deep: #081326;
-  --deep-foreground: #eef2fa;
-  --deep-muted: #93a2c0;
+  --background: #3b5998;
+  --bg-alt: #345286;
+  --deep: #16294d;
+  --deep-foreground: #ffffff;
+  --deep-muted: #b7c6e6;
 
-  --foreground: #eef2fa;
-  --card: rgba(255, 255, 255, 0.065);
-  --card-foreground: #eef2fa;
-  --popover: #0f2242;
-  --popover-foreground: #eef2fa;
+  --foreground: #ffffff;
+  --card: rgba(255, 255, 255, 0.18);
+  --card-foreground: #ffffff;
+  --popover: #345286;
+  --popover-foreground: #ffffff;
 
   --primary: #d9a94a;
   --primary-foreground: #241a06;
-  --secondary: #142a4d;
-  --secondary-foreground: #eef2fa;
-  --muted: #142a4d;
-  --muted-foreground: #93a5c9;
+  --secondary: #2f5588;
+  --secondary-foreground: #ffffff;
+  --muted: #2f5588;
+  --muted-foreground: #d3ddf2;
   --accent-cyan: #38b6d6;
   --accent-cyan-foreground: #06212a;
 
   --destructive: #e08a63;
   --destructive-foreground: #241206;
-  --border: rgba(255, 255, 255, 0.14);
-  --input: rgba(255, 255, 255, 0.16);
+  --border: rgba(255, 255, 255, 0.45);
+  --input: rgba(255, 255, 255, 0.4);
   --ring: #d9a94a;
 
   --status-good: #7fd4a8;
@@ -93,14 +93,10 @@
     color-scheme: dark;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: var(--font-body);
-    background-image: radial-gradient(
-      70% 50% at 50% 0%,
-      color-mix(in srgb, var(--accent-cyan) 7%, transparent),
-      transparent 70%
-    );
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, #1e3a5f, #3b5998, #6d84b4);
+    background-attachment: fixed;
   }
   h1, h2, h3 {
     font-family: var(--font-body);
@@ -115,11 +111,19 @@
 
 @layer utilities {
   .glass {
-    background: linear-gradient(155deg, rgba(255, 255, 255, 0.1), var(--card) 45%);
-    backdrop-filter: blur(20px) saturate(160%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    background: var(--card);
+    backdrop-filter: blur(10px) saturate(160%);
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
     border: 1px solid var(--border);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(15, 30, 60, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(15, 30, 60, 0.35);
   }
 
   .reveal {

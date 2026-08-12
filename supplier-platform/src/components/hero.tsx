@@ -113,35 +113,37 @@ export function Hero() {
           </p>
         </Reveal>
 
-        <div className="mx-auto mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {boxes.map((b, i) => (
-            <Reveal
-              key={b.title}
-              delay={0.28 + 0.08 * i}
-              className="glass card-hover flex flex-col items-center gap-2.5 rounded-2xl px-5 py-6 text-center"
-            >
-              <span className={`card-hover-icon flex size-14 items-center justify-center rounded-full ${b.badge}`}>
-                <b.icon className="size-6" strokeWidth={1.75} />
-              </span>
-              <span className="font-mono text-[0.68rem] tracking-wide text-muted-foreground uppercase">
-                {b.titleEn}
-              </span>
-              <h3 className="text-base">{b.title}</h3>
+        <Reveal delay={0.22} className="glass-panel mx-auto mt-9 rounded-[2rem] p-4 sm:p-6">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {boxes.map((b, i) => (
+              <Reveal
+                key={b.title}
+                delay={0.34 + 0.08 * i}
+                className="glass card-hover flex flex-col items-center gap-2.5 rounded-2xl px-5 py-6 text-center"
+              >
+                <span className={`card-hover-icon flex size-14 items-center justify-center rounded-full ${b.badge}`}>
+                  <b.icon className="size-6" strokeWidth={1.75} />
+                </span>
+                <span className="font-mono text-[0.68rem] tracking-wide text-muted-foreground uppercase">
+                  {b.titleEn}
+                </span>
+                <h3 className="text-base">{b.title}</h3>
 
-              {b.kind === "action" ? (
-                <a
-                  href="#pilot"
-                  className="mt-1 flex w-full items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-2 text-start text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground"
-                >
-                  <span className="flex-1">صف المنتج اللي تدور عليه...</span>
-                  <ArrowLeft className="size-3.5 shrink-0" strokeWidth={2} />
-                </a>
-              ) : (
-                <p className="text-sm text-muted-foreground">{b.body}</p>
-              )}
-            </Reveal>
-          ))}
-        </div>
+                {b.kind === "action" ? (
+                  <a
+                    href="#pilot"
+                    className="mt-1 flex w-full items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3.5 py-2 text-start text-xs text-muted-foreground transition-colors hover:border-primary/50 hover:text-foreground"
+                  >
+                    <span className="flex-1">صف المنتج اللي تدور عليه...</span>
+                    <ArrowLeft className="size-3.5 shrink-0" strokeWidth={2} />
+                  </a>
+                ) : (
+                  <p className="text-sm text-muted-foreground">{b.body}</p>
+                )}
+              </Reveal>
+            ))}
+          </div>
+        </Reveal>
 
         <Reveal delay={0.68} className="mt-8 flex flex-wrap items-center justify-center gap-5">
           <Button asChild size="lg">
